@@ -6,8 +6,8 @@ html {
   box-sizing: inherit;
 }
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 body {
     font-family: 'Open Sans', sans-serif;
@@ -15,25 +15,27 @@ body {
     max-width: 1000px;
     width: 90%;
 }
-
-#title {
-    padding: 20px 0px;
+main {
+    padding: 4rem 0.5rem 0.5rem 0.5rem
 }
-
+h1 {
+    padding: 0.5rem 1rem;
+}
+h2 {
+    padding-top: 1rem;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 0.5rem;
+}
 #grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-}
-
-#introduction {
-    padding: 20px 0px;
+    grid-gap: 1rem;
 }
 
 /* Header  & Footer*/
 nav {
     overflow: hidden;
-    background-color: #EEEEEE;
+    background-color: #cceeff;
 }
 nav a {
     display: block;
@@ -41,16 +43,24 @@ nav a {
     float: left;
     transition: all 0.3s ease;
     text-decoration: none;
+    color: black;
 }
 nav a:hover {
-    background-color: ;
+    background-color: #b3e6ff;
+    border-bottom: 3px solid #33bbff;
 }
 .activelink {
-    background-color: ;
+    background-color: #b3e6ff;
+    border-bottom: 3px solid #33bbff;
 }
 .hamburger {
     float: right;
     display: none;
+}
+footer {
+    background-color: #e6f7ff;
+    min-height: 150px;
+    padding: 1em 0.5em;
 }
 
 /* Trips */
@@ -64,10 +74,14 @@ nav a:hover {
     background-color: rgba(0,0,0,0.6);
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 5px;
     color: white;
     padding: 0.5rem;
 }
+
+/* Anecdotes */
+
+
 /* Media Queries */
 @media (max-width: 600px) {
     nav a:not(.activelink) {
