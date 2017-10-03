@@ -1,9 +1,78 @@
+/*Global styles */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 * {
     margin: 0px;
     padding: 0px;
 }
-
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 90%;
+}
 #grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+/* Header  & Footer*/
+nav {
+    overflow: hidden;
+    background-color: #EEEEEE;
+}
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    float: left;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: ;
+}
+.activelink {
+    background-color: ;
+}
+.hamburger {
+    float: right;
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    nav a:not(.activelink) {
+        display: none;
+    }
+    nav {
+        position: relative;
+    }
+    nav.openburger a {
+        display: block;
+    }
+    nav a.hamburger {
+        display: block;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+    nav a {
+        float: none;
+        display: block;
+    }
+    body {
+        width: 100%;
+    }
+    main {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+    }
+    section.span {
+    grid-column-start: 1; 
+    grid-column-end: 1;   
+}
 }
