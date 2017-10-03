@@ -32,7 +32,7 @@ h2 {
     grid-gap: 1rem;
 }
 
-/* Header  & Footer*/
+/* Header & Footer*/
 nav {
     overflow: hidden;
     background-color: #cceeff;
@@ -42,6 +42,7 @@ nav a {
     padding: 0.5rem 1rem;
     float: left;
     transition: all 0.3s ease;
+    border-bottom: 3px solid #cceeff;
     text-decoration: none;
     color: black;
 }
@@ -62,7 +63,14 @@ footer {
     min-height: 150px;
     padding: 1em 0.5em;
 }
+.dropdown {
+    background-color: rgba(50,50,50,0.5);
+    position: relative;
+}
 
+.dropcontent {
+    position: absolute;
+}
 /* Trips */
 .tripcard {
     position: relative;
@@ -82,9 +90,30 @@ footer {
 /* Anecdotes */
 
 
+/* Form */
+input, textarea {
+    width: 50%;
+    display: block;
+    font-size: 1rem;
+    border: none;
+    background-color: #EEEEEE;
+    margin-bottom: 1em;
+}
+#text {
+    width: 70%;
+    min-height: 100px;
+    margin-bottom: 0;
+}
+button#submitcontact {
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #b3e6ff;
+    border: none;
+    margin-top: 0.5rem;
+}
 /* Media Queries */
 @media (max-width: 600px) {
-    nav a:not(.activelink) {
+    nav a:not(:first-of-type) {
         display: none;
     }
     nav {
@@ -98,11 +127,16 @@ footer {
         top: 0;
         right: 0;
         position: absolute;
-        padding-left: 50px;
+        border-left: 2px solid white;
     }
     nav a {
         float: none;
         display: block;
+        border-bottom: 0px;
+    }
+    nav a:hover {
+        background-color: #b3e6ff;
+        border-bottom: 0px;
     }
     body {
         width: 100%;
@@ -114,5 +148,8 @@ footer {
     section.span {
     grid-column-start: 1; 
     grid-column-end: 1;   
+    }
+    input, textarea, #text, button#submitcontact {
+        width: 100%;
     }
 }
