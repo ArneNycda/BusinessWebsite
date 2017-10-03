@@ -21,6 +21,10 @@ body {
     grid-gap: 5px;
 }
 
+#introduction {
+    padding: 20px 0px;
+}
+
 /* Header  & Footer*/
 nav {
     overflow: hidden;
