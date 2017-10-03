@@ -59,6 +59,7 @@ nav a:hover {
         top: 0;
         right: 0;
         position: absolute;
+        padding-left: 50px;
     }
     nav a {
         float: none;
@@ -74,5 +75,5 @@ nav a:hover {
     section.span {
     grid-column-start: 1; 
     grid-column-end: 1;   
-}
+    }
 }
