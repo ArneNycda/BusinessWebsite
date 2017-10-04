@@ -1,43 +1,26 @@
-const holidayInfo = [
-    {
-        location: 'paris',
-        name: 'Paris',
-        description: 'City of Love',
-        image: 'parisbg'
-    },
-    {
-        location: 'amsterdam',
-        name: 'Amsterdam',
-        description: 'Tour the Canals',
-        image: 'amsterdambg'
-    },
-    {
-        location: 'london',
-        name: 'London',
-        description: 'The Largest European City',
-        image: 'londonbg'
-    }
-];
+require(['util/holidayInfo'], function() {
 
-let holidayGridItems = '';
+    let holidayGridItems = '';
 
-holidayInfo.forEach(holiday => {
-    holidayGridItems += `<section class="tripcard">
-        <img class="tripimage" src="images/${holiday.image}.jpg">
-        <div class="tripdescription">${holiday.name}: ${holiday.description}</div>
-    </section>`;
-});
-
-$(document).ready(function() {
-    $(function(){
-      $("#includeFooter").load("footer.html");
+    holidayInfo.forEach(holiday => {
+        holidayGridItems += `<section class="tripcard">
+            <img class="tripimage" src="images/${holiday.image}.jpg">
+            <div class="tripdescription">${holiday.name}: ${holiday.description}</div>
+        </section>`;
     });
 
-    $(function(){
-      $("#includeHeader").load("header.html");
-    });
+    $(document).ready(function() {
+        $(function(){
+          $("#includeFooter").load("footer.html");
+        });
 
-    $(function() {
-        $('#grid').html(holidayGridItems);
+        $(function(){
+          $("#includeHeader").load("header.html");
+        });
+
+        $(function() {
+            $('#grid').html(holidayGridItems);
+        });
     });
+    
 });
