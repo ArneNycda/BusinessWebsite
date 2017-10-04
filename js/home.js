@@ -1,4 +1,4 @@
-require(['util/holidayInfo'], function() {
+require(['util/holidayInfo', 'header'], function(holidayInfo, header) {
 
     let holidayGridItems = '';
 
@@ -9,13 +9,21 @@ require(['util/holidayInfo'], function() {
         </section>`;
     });
 
+    let holidayList = '';
+
+    holidayInfo.forEach(holiday => {
+        holidayList += `<li><a href="${holiday.location}.html">${holiday.name}</a></li>`;
+    });
+
     $(document).ready(function() {
         $(function(){
-          $("#includeFooter").load("footer.html");
+            $("#includeFooter").load("footer.html");
         });
 
         $(function(){
-          $("#includeHeader").load("header.html");
+            $("#includeHeader").load("header.html", function() {
+                $('.dropdown-content ul').html(holidayList);
+            });
         });
 
         $(function() {
