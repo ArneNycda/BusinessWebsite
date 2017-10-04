@@ -152,7 +152,18 @@ footer {
     color: white;
     padding: 0.5rem;
 }
-
+#gallery img {
+    width: 100%;
+}
+div.column {
+    width: 25%;
+    float: left;
+}
+#gallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /* Anecdotes */
 
 
