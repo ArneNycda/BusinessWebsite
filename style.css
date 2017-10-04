@@ -75,7 +75,7 @@ h2 {
 }
  
 .dropdown:active {
-  max-height: 400px;
+    max-height: 400px;
 }
  
 .dropdown:hover{
@@ -85,7 +85,7 @@ h2 {
 .dropdown {
     position: absolute;
     overflow: hidden;
-    background-color: #cceeff;
+    background-color: #e8f7ff;
     color: black;
     max-height: 0px;
 }﻿
@@ -102,6 +102,9 @@ h2 {
 .dropdown li {
     list-style: none;
 }
+.dropdown li a {
+    text-decoration: none;
+}
  
 .dropdown-content {
     padding: 10px;
@@ -117,7 +120,6 @@ h2 {
 .dropdown-content ul li a {
     display: inline-block;
     padding: 5px 0px;
-    text-decoration: underline;
     color: black;
 }
 .hamburger {
@@ -128,10 +130,6 @@ footer {
     background-color: #e6f7ff;
     min-height: 150px;
     padding: 1em 0.5em;
-}
-.dropdown {
-    background-color: rgba(50,50,50,0.5);
-    position: relative;
 }
 
 .dropcontent {
@@ -215,6 +213,12 @@ button#submitcontact {
         padding: 0px;
         list-style: none;
         background-color: #cceeff;
+    }
+    .dropdown {
+        position: relative;
+    }
+    .dropdown li {
+        padding-left: 30px;
     }
      
     .nav-item {
