@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    $("#navi").click(function() {
-      $(this).toggleClass("openburger");
+    $(".top-nav .hamburger").click(function() {
+      $(this).closest('#navi').toggleClass("openburger");
     });
 
     $(window).on("resize", function() {
       if ($(window).width() > 600) {
-          $("#navi").removeClass();
+          $(".top-nav").removeClass('openburger');
       }
     });
 });
