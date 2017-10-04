@@ -101,7 +101,9 @@ h2 {
  
 .dropdown li {
     list-style: none;
-    padding-left: 30px;
+}
+.dropdown li a {
+    text-decoration: none;
 }
  
 .dropdown-content {
@@ -203,6 +205,9 @@ button#submitcontact {
     }
     .dropdown {
         position: relative;
+    }
+    .dropdown li {
+        padding-left: 30px;
     }
      
     .nav-item {
