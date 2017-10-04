@@ -16,15 +16,15 @@ body {
     width: 90%;
 }
 main {
-    padding: 4rem 0.5rem 0.5rem 0.5rem
+    padding: 4rem 0.5rem 0.5rem 0.5rem;
 }
 h1 {
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
 }
 h2 {
     padding-top: 1rem;
     border-bottom: 1px solid #EEEEEE;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem 1rem;
 }
 #grid {
     display: grid;
@@ -33,93 +33,50 @@ h2 {
 }
 
 /* Header  & Footer*/
-.content {
-    padding: 30px;
-}
- 
-.top-nav {
-    color: black;
-} 
 .top-nav > ul {
     margin: 0px;
     padding: 0px;
     float: left;
     list-style: none;
     width: 100%;
-    background-color: #cceeff;
+    background-color: #b3e6ff;
 }
-
 .top-nav > ul > li {
     float: left;
 }
- 
 .nav-item {
     display: block;
-    padding: 15px 20px;
+    padding: 0.7rem 1rem;
     line-height: 20px;
     color: black;
     text-decoration: none;
 }
- 
 .nav-item:hover {
-    background-color: #cceeff;
+    background-color: #e6f7ff;
 }
- 
-.nav-item:focus {
-    background-color :#cceeff;
-}
- 
 .nav-item:focus ~ .dropdown {
     max-height: 400px;
     transition: max-height 0.4s ease-in;
-}
- 
-.dropdown:active {
-    max-height: 400px;
-}
- 
-.dropdown:hover{
-     max-height: 400px;
-}
- 
+} 
 .dropdown {
     position: absolute;
     overflow: hidden;
-    background-color: #e8f7ff;
+    background-color: #b3e6ff;
     color: black;
     max-height: 0px;
-}﻿
- 
-.dropdown a {
-    color: black;
-    text-decoration: none;
 }
- 
 .dropdown a:hover {
-    color: black;
-}
- 
-.dropdown li {
-    list-style: none;
+    background-color: #e6f7ff;
 }
 .dropdown li a {
     text-decoration: none;
-}
- 
-.dropdown-content {
-    padding: 10px;
-    width: 120px;
-}
- 
+} 
 .dropdown-content ul {
-    padding: 0;
-    margin: 0;
     list-style-type: none;
 }
- 
 .dropdown-content ul li a {
-    display: inline-block;
-    padding: 5px 0px;
+    display: block;
+    padding: 0.7rem 1rem;
     color: black;
 }
 .hamburger {
@@ -129,12 +86,10 @@ h2 {
 footer {
     background-color: #e6f7ff;
     min-height: 150px;
-    padding: 1em 0.5em;
+    /*Remove min hight later when content is set*/
+    padding: 0.7em 0.7em;
 }
 
-.dropcontent {
-    position: absolute;
-}
 /* Trips */
 .tripcard {
     position: relative;
@@ -162,6 +117,7 @@ div.column {
   display: table;
   clear: both;
 }
+
 /* Anecdotes */
 
 
@@ -186,6 +142,13 @@ button#submitcontact {
     border: none;
     margin-top: 0.5rem;
 }
+button#booknow {
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #b3e6ff;
+    border: none;
+    margin-top: 0.5rem;
+}
 /* Media Queries */
 @media (max-width: 600px) {
     .top-nav > ul > li:not(:first-of-type) {
@@ -204,54 +167,26 @@ button#submitcontact {
         top: 0;
         right: 0;
         position: absolute;
-        padding: 13px 10px 13px 50px;
+        padding: 0.7rem;
         text-decoration: none;
+        color: black;
         float: right;
-    }
-    .top-nav > ul {
-        margin: 0px;
-        padding: 0px;
-        list-style: none;
-        background-color: #cceeff;
     }
     .dropdown {
         position: relative;
-    }
-    .dropdown li {
-        padding-left: 30px;
-    }
-     
-    .nav-item {
-        padding: 15px 20px;
-        line-height: 20px;
-        color: black;
-        text-decoration: none;
-    }
-     
-    .nav-item:hover {
-        background-color: #cceeff;
-    }
-     
-    .nav-item:focus {
-        background-color :#cceeff;
-    }
-     
-    .nav-item:focus ~ .dropdown {
-        max-height: 400px;
-        transition: max-height 0.4s ease-in;
+        background-color: #e6f7ff;
     }
     body {
         width: 100%;
     }
-    main {
-        grid-template-columns: 1fr;
-        padding-top: 0;
+    #grid {
+        grid-template-columns: repeat(1, 1fr);
     }
-    section.span {
+    .tripcard {
         grid-column-start: 1; 
-        grid-column-end: 1;   
+        grid-column-end: 3;   
     }
-    input, textarea, #text, button#submitcontact {
+    input, textarea, #text, button#submitcontact, button#booknow {
         width: 100%;
     }
 }
