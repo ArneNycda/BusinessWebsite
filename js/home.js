@@ -2,37 +2,37 @@ const holidayInfo = [
     {
         location: 'paris',
         name: 'Paris',
-        description: 'text1',
+        description: 'City of Love',
         image: 'parisbg'
     },
     {
         location: 'amsterdam',
         name: 'Amsterdam',
-        description: 'text2',
+        description: 'Tour the Canals',
         image: 'amsterdambg'
     },
     {
         location: 'london',
         name: 'London',
-        description: 'text3',
+        description: 'The Largest European City',
         image: 'londonbg'
     },
     {
         location: 'paris',
         name: 'Paris',
-        description: 'text1',
+        description: 'City of Love',
         image: 'parisbg'
     },
     {
         location: 'amsterdam',
         name: 'Amsterdam',
-        description: 'text2',
+        description: 'Tour the Canals',
         image: 'amsterdambg'
     },
     {
         location: 'london',
         name: 'London',
-        description: 'text3',
+        description: 'The Largest European City',
         image: 'londonbg'
     }
 ];
@@ -42,7 +42,7 @@ let holidayGridItems = '';
 holidayInfo.forEach(holiday => {
     holidayGridItems += `<section class="tripcard">
         <img class="tripimage" src="images/${holiday.image}.jpg">
-        <div class="tripdescription">${holiday.name}</div>
+        <div class="tripdescription">${holiday.name}: ${holiday.description}</div>
     </section>`;
 });
 
