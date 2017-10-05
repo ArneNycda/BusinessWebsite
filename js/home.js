@@ -16,9 +16,7 @@ require(['util/holidayInfo'], function(holidayInfo) {
     });
 
     $(document).ready(function() {
-        $(function(){
-            $("#includeFooter").load("footer.html");
-        });
+        $("#includeFooter").load("footer.html");
 
         $(function(){
             const location = window.location.hash === '' ? 'home' : window.location.hash;
@@ -81,11 +79,8 @@ require(['util/holidayInfo'], function(holidayInfo) {
             getContent($(this).attr('href'));
         });
 
-
-        $(function(){
-            $("#includeHeader").load("header.html", function() {
-                $('.dropdown-content ul').html(holidayList);
-            });
+        $("#includeHeader").load("header.html", function() {
+            $('.dropdown-content ul').html(holidayList);
         });
     });
     
