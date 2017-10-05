@@ -65,6 +65,9 @@ h2 {
     color: black;
     max-height: 0px;
 }
+.dropdown:active {     
+    max-height: 400px;        
+}
 .dropdown a:hover {
     background-color: #e6f7ff;
 }
