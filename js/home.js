@@ -30,6 +30,10 @@ require(['util/holidayInfo'], function(holidayInfo) {
             } else {
                 $(function(){
                     const holiday = holidayInfo.find(holiday => holiday.location === location);
+                    let amentities = '';
+                    holiday.amentities.forEach(amentity => {
+                        amentities += `<li>${amentity}</li>`;
+                    })
                     const content = `<section id="gallery">
                             <h2>${holiday.name}</h2>
                             <div class="mySlides">
@@ -49,13 +53,7 @@ require(['util/holidayInfo'], function(holidayInfo) {
                             <section id="amenities">
                                 <h2>What we offer</h2>
                                 <ul>
-                                    <li>4/5-Star Accomodation</li>
-                                    <li>Free Wifi in all locations</li>
-                                    <li>Pets Allowed</li>
-                                    <li>Parking Facilities</li>
-                                    <li>Airport Connections</li>
-                                    <li>Guided Tours</li>
-                                    <li>Our Detailed City Guide</li>
+                                    ${amentities}
                                 </ul>
                             </section>
                             <section id="howtobook">

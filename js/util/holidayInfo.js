@@ -7,7 +7,16 @@ define(function() {
             descriptionLong: `<p>Paris is the capital and most populous city of France. It is at once a film set, one of the world's most beautiful cities &#40;with its golden stone facades and famous monuments&#41;, and a vibrant densely packed collection of villages.</p>
                         <p>But however well you think you know Paris, there’s always something new to discover. Districts change, old ones get restored, whole new areas like Seine Rive Gauche around the new Bibliothèque Nationale go up, or the long shabby Faubourg-St-Denis suddenly becomes the latest hipster-hangout. There’s always a new bar or restaurant to check out, a new star baker, the latest gallery. Behind its grand palaces and boulevards, you can discover intimate courtyards and gardens; behind historic façades are craft workshops and eminent research institutions.</p>
                         <p>Behind the grandiose palaces and boulevards, you can discover intimate courtyards and gardens; behind historic façades are craft workshops and eminent research institutions. Perhaps the true clue to Paris’s appeal is that despite being one of the most visited cities in the world it is also intensely lived-in. With its flats, playgrounds, food markets and cafés, there is no empty heart in the centre; and you, too, can play at being a Parisian.</p>`,
-            image: 'parisbg'
+            image: 'parisbg',
+            amentities: [
+                '4/5-Star Accomodation',
+                'Free Wifi in all locations',
+                'Pets Allowed',
+                'Parking Facilities',
+                'Airport Connections',
+                'Guided Tours',
+                'Our Detailed City Guide'
+            ]
         },
         {
             location: 'amsterdam',
@@ -16,7 +25,16 @@ define(function() {
             descriptionLong: `<p>Paris is the capital and most populous city of France. It is at once a film set, one of the world's most beautiful cities &#40;with its golden stone facades and famous monuments&#41;, and a vibrant densely packed collection of villages.</p>
                         <p>But however well you think you know Paris, there’s always something new to discover. Districts change, old ones get restored, whole new areas like Seine Rive Gauche around the new Bibliothèque Nationale go up, or the long shabby Faubourg-St-Denis suddenly becomes the latest hipster-hangout. There’s always a new bar or restaurant to check out, a new star baker, the latest gallery. Behind its grand palaces and boulevards, you can discover intimate courtyards and gardens; behind historic façades are craft workshops and eminent research institutions.</p>
                         <p>Behind the grandiose palaces and boulevards, you can discover intimate courtyards and gardens; behind historic façades are craft workshops and eminent research institutions. Perhaps the true clue to Paris’s appeal is that despite being one of the most visited cities in the world it is also intensely lived-in. With its flats, playgrounds, food markets and cafés, there is no empty heart in the centre; and you, too, can play at being a Parisian.</p>`,
-            image: 'amsterdambg'
+            image: 'amsterdambg',
+            amentities: [
+                '4/5-Star Accomodation',
+                'Free Wifi in all locations',
+                'Pets Allowed',
+                'Parking Facilities',
+                'Airport Connections',
+                'Guided Tours',
+                'Our Detailed City Guide'
+            ]
         },
         {
             location: 'london',
@@ -25,7 +43,16 @@ define(function() {
             descriptionLong: `<p>Paris is the capital and most populous city of France. It is at once a film set, one of the world's most beautiful cities &#40;with its golden stone facades and famous monuments&#41;, and a vibrant densely packed collection of villages.</p>
                         <p>But however well you think you know Paris, there’s always something new to discover. Districts change, old ones get restored, whole new areas like Seine Rive Gauche around the new Bibliothèque Nationale go up, or the long shabby Faubourg-St-Denis suddenly becomes the latest hipster-hangout. There’s always a new bar or restaurant to check out, a new star baker, the latest gallery. Behind its grand palaces and boulevards, you can discover intimate courtyards and gardens; behind historic façades are craft workshops and eminent research institutions.</p>
                         <p>Behind the grandiose palaces and boulevards, you can discover intimate courtyards and gardens; behind historic façades are craft workshops and eminent research institutions. Perhaps the true clue to Paris’s appeal is that despite being one of the most visited cities in the world it is also intensely lived-in. With its flats, playgrounds, food markets and cafés, there is no empty heart in the centre; and you, too, can play at being a Parisian.</p>`,
-            image: 'londonbg'
+            image: 'londonbg',
+            amentities: [
+                '4/5-Star Accomodation',
+                'Free Wifi in all locations',
+                'Pets Allowed',
+                'Parking Facilities',
+                'Airport Connections',
+                'Guided Tours',
+                'Our Detailed City Guide'
+            ]
         }
     ]}
 );
