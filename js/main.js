@@ -1,3 +1,3 @@
-require(['home', 'header'], function(home, header) {
+require(['home', 'header', 'gallery'], function(home, header, gallery) {
 
 });
