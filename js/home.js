@@ -18,12 +18,6 @@ require(['util/holidayInfo'], function(holidayInfo) {
     $(document).ready(function() {
         $("#includeFooter").load("footer.html");
 
-        $(function(){
-            const location = window.location.hash === '' ? 'home' : window.location.hash;
-
-            getContent(location);
-        });
-
         const getContent = function(hash) {
             const location = hash.replace('#', '');
 
@@ -72,15 +66,20 @@ require(['util/holidayInfo'], function(holidayInfo) {
                     $("#includeMain").html(content);
                 });
             }
-
         }
-
-        $("body").on('click', '.contentLink', function() {
-            getContent($(this).attr('href'));
-        });
 
         $("#includeHeader").load("header.html", function() {
             $('.dropdown-content ul').html(holidayList);
+        });
+
+        $(function(){
+            const location = window.location.hash === '' ? 'home' : window.location.hash;
+
+            getContent(location);
+        });
+
+        $(window).on('hashchange', function() {
+            getContent(window.location.hash);
         });
     });
     
