@@ -4,7 +4,7 @@ require(['util/holidayInfo'], function(holidayInfo) {
 
     holidayInfo.forEach(holiday => {
         holidayGridItems += `<section class="tripcard">
-            <img class="tripimage" src="images/${holiday.image}.jpg">
+            <a href="#${holiday.location}" class="contentLink"><img class="tripimage" src="images/${holiday.image}.jpg"></a>
             <div class="tripdescription">${holiday.name}: ${holiday.description}</div>
         </section>`;
     });
