@@ -179,10 +179,10 @@ div.column {
     text-align: justify;
 }
 #amenities {
-    grid-column: 3 / 3;
+    grid-column: 3 / 4;
 }
 #howtobook {
-    grid-column: 3 / 3;
+    grid-column: 3 / 4;
 }
 
 /* Anecdotes */
