@@ -230,7 +230,7 @@ input, textarea {
     min-height: 100px;
     margin-bottom: 0;
 }
-button#submitcontact {
+button#submitcontact, button#booknow {
     font-size: 1rem;
     padding: 0.5rem;
     background-color: #b3e6ff;
@@ -238,7 +238,7 @@ button#submitcontact {
     margin-top: 0.5rem;
     transition: all 0.3s ease-in;
 }
-button#submitcontact:hover {
+button#submitcontact:hover, button#booknow:hover {
     background-color: #FFFFFF;
     border: 3px solid #b3e6ff;
 }
