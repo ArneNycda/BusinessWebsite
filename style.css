@@ -22,14 +22,17 @@ h1 {
     padding: 0.7rem 1rem;
 }
 h2 {
-    padding-top: 1rem;
     border-bottom: 1px solid #EEEEEE;
     margin-bottom: 0.7rem 1rem;
+}
+p {
+    margin-bottom: 1em;
 }
 #grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Header  & Footer*/
@@ -88,9 +91,49 @@ h2 {
 }
 footer {
     background-color: #e6f7ff;
-    min-height: 150px;
-    /*Remove min hight later when content is set*/
     padding: 0.7em 0.7em;
+}
+footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer ul {
+    list-style: none;
+    display: block;
+}
+#footerleft {
+    float: left;
+}
+#paymentmethods li {
+    font-size: 1.5rem;
+}
+#socialicons {
+    float: right;
+}
+#socialicons li {
+    padding: 1rem;
+    border-radius: 50%;
+    color: #FFFFFF;
+}
+#socialicons li.fa-facebook-official {
+    background-color: #3B5998;
+}
+#socialicons li.fa-twitter {
+    background-color: #55ACEE;
+}
+#socialicons li.fa-pinterest {
+    background-color: #cb2027;
+}
+#socialicons li.fa-instagram {
+    background-color: #125688;
+}
+#socialicons li.fa-linkedin {
+    background-color: #007bb5;
+}
+#socialicons li:hover {
+    background-color: #FFFFFF;
+    color: #000000;
 }
 
 /* Trips */
@@ -122,9 +165,38 @@ div.column {
 }
 
 /* Anecdotes */
+.aneccontainer {
+    background: #EEEEEE;
+    position: relative;
+    margin-bottom: 2rem;
+    width: 70%;
+    padding: 1rem;
+    box-shadow: 3px 3px 0px #CCCCCC;
+}
+.aneccontainer::after {
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: -10px;
+    left: 20px;
+    background-color: #EEEEEE;;
+    transform: rotate(45deg);
+    z-index: 0;
+}
 
+.aneccontainer.aright::after {
+    left: auto;
+    right: 20px;
+}
+.rating {
+    color: #fbb03b;
+}
 
 /* Form */
+form {
+    margin-bottom: 1rem;
+}
 input, textarea {
     width: 50%;
     display: block;
@@ -142,18 +214,20 @@ button#submitcontact {
     font-size: 1rem;
     padding: 0.5rem;
     background-color: #b3e6ff;
-    border: none;
+    border: 3px solid #b3e6ff;
     margin-top: 0.5rem;
+    transition: all 0.3s ease-in;
 }
-button#booknow {
-    font-size: 1rem;
-    padding: 0.5rem;
-    background-color: #b3e6ff;
-    border: none;
-    margin-top: 0.5rem;
+button#submitcontact:hover {
+    background-color: #FFFFFF;
+    border: 3px solid #b3e6ff;
 }
+
 /* Media Queries */
 @media (max-width: 600px) {
+    body {
+        width: 100%;
+    }
     .top-nav > ul > li:not(:first-of-type) {
         display: none;
     }
@@ -179,8 +253,15 @@ button#booknow {
         position: relative;
         background-color: #e6f7ff;
     }
-    body {
-        width: 100%;
+    #footerleft, #socialicons {
+        float: none;
+    }
+    #socialicons li {
+        display: inline-block;
+        border-radius: 0;
+    }
+    .aneccontainer {
+        width: 100%
     }
     #grid {
         grid-template-columns: repeat(1, 1fr);
