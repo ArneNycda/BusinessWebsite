@@ -43,10 +43,10 @@ require(['util/holidayInfo'], function(holidayInfo) {
                         </section>
 
                         <div id="trip">
-                            <section id="tripdescription2">
+                            <section id="descriptionLong">
                                 <h2>Description</h2>
                                 ${holiday.descriptionLong}</section>
-                            <aside id="amenities">
+                            <section id="amenities">
                                 <h2>What we offer</h2>
                                 <ul>
                                     <li>4/5-Star Accomodation</li>
@@ -57,7 +57,7 @@ require(['util/holidayInfo'], function(holidayInfo) {
                                     <li>Guided Tours</li>
                                     <li>Our Detailed City Guide</li>
                                 </ul>
-                            </aside>
+                            </section>
                             <section id="howtobook">
                                 <button id="booknow">Book Now!</button>
                             </section>
