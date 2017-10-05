@@ -22,7 +22,7 @@ require(['util/holidayInfo'], function(holidayInfo) {
 
         $(function(){
             const location = window.location.hash === '' ? 'home' : window.location.hash;
-            
+
             getContent(location);
         });
 
@@ -71,9 +71,7 @@ require(['util/holidayInfo'], function(holidayInfo) {
                             </section>
                         </div>`;
 
-                    $("#includeMain").html(content, function() {
-                        $('#grid').html(holidayGridItems);
-                    });
+                    $("#includeMain").html(content);
                 });
             }
 
