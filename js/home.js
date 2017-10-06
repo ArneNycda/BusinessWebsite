@@ -85,7 +85,7 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
                                 </ul>
                             </section>
                             <section id="howtobook">
-                                <button id="booknow">Book Now!</button>
+                                <a href="#about"><button id="booknow">Book Now!</button></a>
                             </section>
                         </div>
                         <section id="reviews">
