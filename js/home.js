@@ -47,7 +47,11 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
                     let amentities = '';
                     holiday.amentities.forEach(amentity => {
                         amentities += `<li>${amentity}</li>`;
-                    })
+                    });
+                    let descriptionLong = ''
+                    holiday.descriptionLong.forEach(paragraph => {
+                        descriptionLong += `<p>${paragraph}</p>`;
+                    });
                     const content = `<section id="gallery">
                             <h2>${holiday.name}</h2>
                             <div class="mySlides">
@@ -63,7 +67,7 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
                         <div id="trip">
                             <section id="descriptionLong">
                                 <h2>Description</h2>
-                                ${holiday.descriptionLong}</section>
+                                ${descriptionLong}</section>
                             <section id="amenities">
                                 <h2>What we offer</h2>
                                 <ul>
