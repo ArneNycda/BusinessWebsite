@@ -1,4 +1,4 @@
-require(['util/holidayInfo'], function(holidayInfo) {
+require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
 
     let holidayGridItems = '';
 
@@ -15,6 +15,19 @@ require(['util/holidayInfo'], function(holidayInfo) {
         holidayList += `<li><a href="#${holiday.location}" class="contentLink">${holiday.name}</a></li>`;
     });
 
+    let reviewList = '';
+
+    reviews.forEach((review, index) => {
+        const arrowPosition = index % 2 === 0 ? 'left' : 'right';
+        const stars = `${'&#9733'.repeat(review.rating)}${'&#9733'.repeat(5 - review.rating)}`;
+
+        reviewList  += `<div class="reviewcontainer a${arrowPosition}">
+                <p class="reviewtext"><em>${review.comment}</em>
+                    <br />- ${review.name}
+                    <br /><span class="rating">${stars}</p>
+            </div>`;
+    });
+
     $(document).ready(function() {
         $("#includeFooter").load("footer.html");
 
@@ -24,6 +37,7 @@ require(['util/holidayInfo'], function(holidayInfo) {
             if(location === 'home') {
                 $("#includeMain").load('home.html', function() {
                     $('#grid').html(holidayGridItems);
+                    $('#reviews').append(reviewList);
                 });
             } else if (location === 'about') {
                 $("#includeMain").load('about.html');

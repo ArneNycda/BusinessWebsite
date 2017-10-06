@@ -184,8 +184,8 @@ div.column {
     grid-column: 3 / 4;
 }
 
-/* Anecdotes */
-.aneccontainer {
+/* Reviews */
+.reviewcontainer {
     background: #EEEEEE;
     position: relative;
     margin-bottom: 2rem;
@@ -193,7 +193,7 @@ div.column {
     padding: 1rem;
     box-shadow: 3px 3px 0px #CCCCCC;
 }
-.aneccontainer::after {
+.reviewcontainer::after {
     content: " ";
     position: absolute;
     width: 40px;
@@ -205,7 +205,7 @@ div.column {
     z-index: 0;
 }
 
-.aneccontainer.aright::after {
+.reviewcontainer.aright::after {
     left: auto;
     right: 20px;
 }
@@ -286,7 +286,7 @@ button#booknow {
         display: inline-block;
         border-radius: 0;
     }
-    .aneccontainer {
+    .reviewcontainer {
         width: 100%
     }
     #grid {
