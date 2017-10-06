@@ -1,5 +1,7 @@
 require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
 
+    const ucFirst = string => string.charAt(0).toUpperCase() + string.slice(1);
+
     let holidayGridItems = '';
 
     holidayInfo.forEach(holiday => {
@@ -15,18 +17,25 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
         holidayList += `<li><a href="#${holiday.location}" class="contentLink">${holiday.name}</a></li>`;
     });
 
-    let reviewList = '';
+    const getReviews = location => {
+        let reviewList = '';
+        const reviewsToShow = location ? reviews.filter(review => review.location === location) : reviews;
 
-    reviews.forEach((review, index) => {
-        const arrowPosition = index % 2 === 0 ? 'left' : 'right';
-        const stars = `${'&#9733'.repeat(review.rating)}${'&#9734'.repeat(5 - review.rating)}`;
+        reviewsToShow.forEach((review, index) => {
+            const arrowPosition = index % 2 === 0 ? 'left' : 'right';
+            const stars = `${'&#9733'.repeat(review.rating)}${'&#9734'.repeat(5 - review.rating)}`;
+            const locationUC = ucFirst(review.location);
 
-        reviewList  += `<div class="reviewcontainer a${arrowPosition}">
+            reviewList  += `<div class="reviewcontainer a${arrowPosition}">
                 <p class="reviewtext"><em>${review.comment}</em>
-                    <br />- ${review.name}
+                    <br />- ${review.name} (went to ${locationUC})
                     <br /><span class="rating">${stars}</p>
-            </div>`;
-    });
+                </div>`;
+        });
+
+        return reviewList;
+    }
+
 
     $(document).ready(function() {
         $("#includeFooter").load("footer.html");
@@ -37,7 +46,7 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
             if(location === 'home') {
                 $("#includeMain").load('home.html', function() {
                     $('#grid').html(holidayGridItems);
-                    $('#reviews').append(reviewList);
+                    $('#reviews').append(getReviews());
                 });
             } else if (location === 'about') {
                 $("#includeMain").load('about.html');
@@ -73,9 +82,13 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
                             <section id="howtobook">
                                 <button id="booknow">Book Now!</button>
                             </section>
-                        </div>`;
+                        </div>
+                        <section id="reviews">
+                            <h2>What our Customers Say</h2>
+                        </section>`;
 
                     $("#includeMain").html(content);
+                    $('#reviews').append(getReviews(holiday.location));
                 });
             }
         }
