@@ -19,7 +19,7 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
 
     reviews.forEach((review, index) => {
         const arrowPosition = index % 2 === 0 ? 'left' : 'right';
-        const stars = `${'&#9733'.repeat(review.rating)}${'&#9733'.repeat(5 - review.rating)}`;
+        const stars = `${'&#9733'.repeat(review.rating)}${'&#9734'.repeat(5 - review.rating)}`;
 
         reviewList  += `<div class="reviewcontainer a${arrowPosition}">
                 <p class="reviewtext"><em>${review.comment}</em>
