@@ -1,6 +1,9 @@
 require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
 
     const ucFirst = string => string.charAt(0).toUpperCase() + string.slice(1);
+    holidayInfo.forEach(holiday => {
+        holiday.name = ucFirst(holiday.location);
+    });
 
     let holidayGridItems = '';
 
