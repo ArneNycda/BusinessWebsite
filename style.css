@@ -187,6 +187,7 @@ div.column {
 /* Reviews */
 .reviewcontainer {
     background: #EEEEEE;
+    
     position: relative;
     margin-bottom: 2rem;
     width: 70%;
@@ -204,7 +205,6 @@ div.column {
     transform: rotate(45deg);
     z-index: 0;
 }
-
 .reviewcontainer.aright::after {
     left: auto;
     right: 20px;
@@ -247,6 +247,9 @@ button#booknow {
     height: 100px;
     font-size: 2rem;
     border-radius: 1rem;
+}
+#contactaddress {
+    list-style: none;
 }
 
 /* Media Queries */

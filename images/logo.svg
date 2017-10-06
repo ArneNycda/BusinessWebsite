@@ -7,14 +7,14 @@
 <![CDATA[
 .st3 {
     opacity: 0;
-    animation: plane 30s linear forwards 2s;
-    transform: translateX(-2vh);
+    animation: plane 20s linear forwards 2s;
+    transform: translateX(-2vw);
 }
 .st1 {
     fill: #FBB03B;
     opacity: 0;
     animation: sun 4s linear forwards 0s;
-    transform: translateX(-2vh);
+    transform: translateX(-2vw);
 }
 .st2 {
     stroke: #000;
@@ -34,16 +34,16 @@
         opacity: 1;
     }
     75% {
-        transform: translatex(50vh);
+        transform: translatex(50vw);
     }
     100% {
-        transform: translatex(65vh);
+        transform: translatex(70vw);
         opacity: 0;
     }
 }
 @keyframes sun{
     100% {
-        transform: translateX(0vh);
+        transform: translateX(0vw);
         fill: #FBB03B;
         opacity: 1;
     }
