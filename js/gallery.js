@@ -1,4 +1,7 @@
-$("body").on('mouseenter', '.column img', function() {
-    var image = $(this).attr("src");
-    $(".mySlides img").attr("src", function(){return image;});
+$("body").on('mouseenter', '#gallery .imageSmall', function() {
+    const image = $(this).attr("src");
+    const imageBig = $(".imageBig").attr("src");
+
+    $(".imageBig").attr("src", function(){return image;});
+    $(this).attr("src", function(){return imageBig;})
 });

@@ -54,14 +54,10 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
                     });
                     const content = `<section id="gallery">
                             <h2>${holiday.name}</h2>
-                            <div class="mySlides">
-                                <img class="mainimage" src="images/${holiday.image}.jpg" alt="Picture1">
-                            </div>  
-                            
-                            <div class="column"><img src="images/${holiday.image}.jpg" class="demo"></div>
-                            <div class="column"><img src="images/${holiday.location}2.jpg" class="demo"></div>
-                            <div class="column"><img src="images/${holiday.location}3.jpg" class="demo"></div>
-                            <div class="column"><img src="images/${holiday.location}4.jpg" class="demo"></div>
+                            <img class="imageBig" src="images/${holiday.image}.jpg" alt="Picture1">
+                            <img class="imageSmall" src="images/${holiday.location}2.jpg" alt="Picture2">
+                            <img class="imageSmall" src="images/${holiday.location}3.jpg" alt="Picture3">
+                            <img class="imageSmall" src="images/${holiday.location}4.jpg" alt="Picture4">
                         </section>
 
                         <div id="trip">

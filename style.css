@@ -152,10 +152,12 @@ footer ul {
     color: white;
     padding: 0.5rem;
 }
-#gallery img {
-    width: 100%;
+
+#gallery .imageBig {
+    width: 75%;
+    float:left;
 }
-div.column {
+#gallery .imageSmall {
     width: 25%;
     float: left;
 }
