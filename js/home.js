@@ -19,7 +19,9 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
 
     const getReviews = location => {
         let reviewList = '';
-        const reviewsToShow = location ? reviews.filter(review => review.location === location) : reviews;
+        const reviewsToShow = location ? 
+            reviews.filter(review => review.location === location)
+            : reviews.sort(() => .5 - Math.random()).slice(0, 3);
 
         reviewsToShow.forEach((review, index) => {
             const arrowPosition = index % 2 === 0 ? 'left' : 'right';
@@ -53,9 +55,9 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
             } else {
                 $(function(){
                     const holiday = holidayInfo.find(holiday => holiday.location === location);
-                    let amentities = '';
-                    holiday.amentities.forEach(amentity => {
-                        amentities += `<li>${amentity}</li>`;
+                    let amenities = '';
+                    holiday.amenities.forEach(amentity => {
+                        amenities += `<li>${amentity}</li>`;
                     });
                     let descriptionLong = ''
                     holiday.descriptionLong.forEach(paragraph => {
@@ -76,7 +78,7 @@ require(['util/holidayInfo', 'util/reviews'], function(holidayInfo, reviews) {
                             <section id="amenities">
                                 <h2>What we offer</h2>
                                 <ul>
-                                    ${amentities}
+                                    ${amenities}
                                 </ul>
                             </section>
                             <section id="howtobook">

@@ -9,7 +9,7 @@ define(function() {
                         'Behind the grandiose palaces and boulevards, you can discover intimate courtyards and gardens; behind historic façades are craft workshops and eminent research institutions. Perhaps the true clue to Paris’s appeal is that despite being one of the most visited cities in the world it is also intensely lived-in. With its flats, playgrounds, food markets and cafés, there is no empty heart in the centre; and you, too, can play at being a Parisian.'
             ],
             image: 'parisbg',
-            amentities: [
+            amenities: [
                 '4/5-Star Accomodation',
                 'Free Wifi in all locations',
                 'Pets Allowed',
@@ -28,7 +28,7 @@ define(function() {
                         'Amsterdam somehow manages to have it all. It has the buzz of a metropolis, with few big-city drawbacks. It’s small enough to walk or cycle almost anywhere you want, yet is rarely dull. Dinky gabled buildings, pretty bridges and quiet canals give it village-like charm, yet you’ll also find top-ranking art museums and one of the best orchestras in the world. Most of all, Amsterdam combines its glittering past with a wry, rough, rebellious contemporary edginess.',
             ],
             image: 'amsterdambg',
-            amentities: [
+            amenities: [
                 '4/5-Star Accomodation',
                 'Free Wifi in all locations',
                 'Pets Allowed',
@@ -47,7 +47,7 @@ define(function() {
                         'London is always open for business, but expect skeleton service on big holidays and weather extremes (by our standards) may cause transport havoc. Shoppers pour in from across the world for January and July sales. The Frieze Art Fair has turned October into an unofficial art month. The quietest time is post-Christmas to late March and the busiest is July/August, when school groups arrive like noisy swallows to replace the holidaying business market. There is no summer exodus as in Paris or Buenos Aires.'
             ],
             image: 'londonbg',
-            amentities: [
+            amenities: [
                 '4/5-Star Accomodation',
                 'Free Wifi in all locations',
                 'Pets Allowed',
@@ -66,7 +66,7 @@ define(function() {
                 'From the remains of the old Arab wall, to small Gothic churches and early Renaissance works, Madrid boasts a multitude of rich and varied works of art. Madrid comes from the Arabic word Magerit ("mother of waters"), which was the name that was given to the fortress built on the banks of the Manzanares River by the Umayyad of Cordoba, Muhammed (823-886). Although the city grew under the Arabs for two hundred years, the only remains still standing from that period are the wall and a few towers, which were turned into bell towers. The arrival of Los Austrias –as the Hapsburg dynasty was known– in the 16th century, and at the period of maximum splendour in the 17th century, brought about the monuments that today make up one of the most famous parts of the city –the area of "Los Austrias"–, along with the Plaza Mayor square, and a number of beautiful sites churches and convents. The austere Baroque façades contrast with the luxurious interiors of the palaces.'
             ],
             image: 'madridbg',
-            amentities: [
+            amenities: [
                 '4/5-Star Accomodation',
                 'Free Wifi in all locations',
                 'Pets Allowed',
@@ -85,7 +85,7 @@ define(function() {
                 'Rome is a city that needs no introduction, but a detailed guide to its rustic restaurants, hidden hotels, and many cultural attractions certainly won\'t hurt those looking for more than the canned tourist trip. With a cornucopia of exquisite experiences to be had—from savoring cornetti on the balcony of Audrey Hepburn\'s favorite hotel to gazing at the Bernini sculptures at the ever-serene Villa Borghese, visits to hip neighborhoods like Pigneto to stops by historical ruins, and more—we\'re sharing our favorite ways to make the most out of a visit to one of the world\'s oldest cities.'
             ],
             image: 'romebg',
-            amentities: [
+            amenities: [
                 '4/5-Star Accomodation',
                 'Free Wifi in all locations',
                 'Pets Allowed',
@@ -103,7 +103,7 @@ define(function() {
                 'For all its reputation as the capital of cool, Berlin makes a fabulous family destination. Berliners are generally tolerant of children, public transport is easy, cheap and fast, and the city brims with parks, playgrounds and lakes. Queues for the main attractions are usually shorter than in many other cities thanks to Berlin’s relatively small population (3.6 million) and impressive wealth of cultural delights, and it’s usually possible to beat the queues for big sights like the Reichstag and the TV Tower by simply booking online.'
             ],
             image: 'berlinbg',
-            amentities: [
+            amenities: [
                 '4/5-Star Accomodation',
                 'Free Wifi in all locations',
                 'Pets Allowed',
